@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout</title>
+
+    <link rel="stylesheet" href="https://bootswatch.com/5/journal/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+    <style>
+        .displayHide{
+            display: none;
+        }
+        .displayShow{
+            display: block;
+        }
+    </style>
+    <script src="/routes/formList.js"></script>
+</head>
+<body>
+    <div class="container">
+        <%- body %>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+    <script>
+
+        const form1 = document.querySelector('.form1');
+        const form2 = document.querySelector('.form2');
+        const form3 = document.querySelector('.form3');
+        const form4 = document.querySelector('.form4');
+
+        const showform1 = () => {
+            form1.classList.remove('displayHide')
+            form1.classList.add('displayShow')
+            form2.classList.remove('displayShow')
+            form2.classList.add('displayHide')
+            form3.classList.remove('displayShow')
+            form3.classList.add('displayHide')
+            form4.classList.remove('displayShow')
+            form4.classList.add('displayHide')
+           
+        }
+
+        const showform2 = () => {
+            form2.classList.remove('displayHide')
+            form2.classList.add('displayShow')
+            form1.classList.remove('displayShow')
+            form1.classList.add('displayHide')
+            form3.classList.remove('displayShow')
+            form3.classList.add('displayHide')
+            form4.classList.remove('displayShow')
+            form4.classList.add('displayHide')
+        }
+
+         const showform3 = () => {
+                form3.classList.remove('displayHide')
+                form3.classList.add('displayShow')
+                form2.classList.remove('displayShow')
+                form2.classList.add('displayHide')
+                form1.classList.remove('displayShow')
+                form1.classList.add('displayHide')
+                form4.classList.remove('displayShow')
+                form4.classList.add('displayHide')
+
+            }
+        
+        const showform4 = () => {
+            form4.classList.remove('displayHide')
+            form4.classList.add('displayShow')
+            form2.classList.remove('displayShow')
+            form2.classList.add('displayHide')
+            form3.classList.remove('displayShow')
+            form3.classList.add('displayHide')
+            form1.classList.remove('displayShow')
+            form1.classList.add('displayHide')
+
+        }
+    </script>
+</body>
+</html>

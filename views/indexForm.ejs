@@ -1,0 +1,87 @@
+<div class="row mt-5">
+    <div class="col-md-6 m-auto">
+        <div class="card card-body ">
+            <form action='<%= path %>' method="post" enctype="multipart/form-data">
+                
+                <div class="form1">
+                   <input type="hidden" name="user_email" value="<%= email %>">
+                    <h4 class="text-center mb-3">Please choose which risk type you would like to help.</h4>
+                    <div class="form-group">
+                        <input type="checkbox" name="religious_minority" id="" value="Religious Minority">Religious Minority
+                    </div>
+                    <div class="form-group">
+                        <input type="checkbox" name="ethnic_minority" id="" value="Ethnic Minority">Ethnic Minority
+                    </div>
+                    <div class="form-group">
+                        <input type="checkbox" name="women_at_risk" id="" value="Women At Risk">Women At Risk
+                    </div>
+                    <div class="form-group">
+                        <input type="checkbox" name="US_government_affiliate" id="" value="US Government Affiliate">US Government Affiliate
+                    </div>
+                    <div class="form-group">
+                        <input type="checkbox" name="journalist" id="" value="Journalist">Journalist
+                    </div>
+                    <div class="form-group">
+                        <input type="checkbox" name="HRDs" id="" value="HRD's">HRD's
+                    </div>
+                    <div class="form-group">
+                        <input type="checkbox" name="civil_society" id="" value="Civil Society">Civil Society
+                    </div>
+                    <div class="form-group">
+                        <input type="checkbox" name="other" id="" value="Other">Other...
+                    </div>
+                    <button type="button" class="btn btn-primary btn-block" onclick="showform2()">NEXT</button>
+                </div>
+                <!--------------------- Form2 --------------------->
+                <div class="form2 displayHide">
+                    <h4 class="text-center mb-3">Please choose which risk type you would like to help.</h4>
+                    <div class="form-group">
+                        <input type="checkbox" name="hosting_or_housing" id="" value="Hosting Or Housing">Hosting Or Housing
+                    </div>
+                    <div class="form-group">
+                        <input type="checkbox" name="hiring" id="" value="Hiring">Hiring
+                    </div>
+                    <div class="form-group">
+                        <input type="checkbox" name="donating" id="" value="Donating">Donating
+                    </div>
+                    <div class="form-group">
+                        <input type="checkbox" name="investing" id="" value="Investing">Investing
+                    </div>
+                    <button type="button" class="btn btn-primary btn-block" onclick="showform3()">NEXT</button>
+                    <button type="button" class="btn btn-secondary btn-block" onclick="showform1()">BACK</button>
+                </div>
+                <!-------------- Form3 -------------->
+                <div class="form3 displayHide">
+                    <h4 class="text-center mb-3">Please enter the number of people you are wiling to help.</h4>
+                    <p>(leave blank for all options)</p>
+                    <div class="form-group">
+                        Ages <br>
+                        <input type="text" name="ages" placeholder='(List as comma-separated values, e.g."33, 31, 14, 10, 5")'>
+                    </div>
+                    <div class="form-group">
+                        Number of Men/Women/Boys/Girls <br>
+                        <input type="text" name="people_number" placeholder='(comma-separated, e.g."2 men, 3 women, 3 boys, 2 girls ")'>
+                    </div>
+                    <button type="button" class="btn btn-primary btn-block" onclick="showform4()">NEXT</button>
+                    <button type="button" class="btn btn-secondary btn-block" onclick="showform2()">BACK</button>
+                </div>
+                <!--------------- Form4 ----------------->
+                <div class="form4 displayHide">
+                    <h4 class="text-center mb-3">Please enter additional information about your application</h4>
+                    <div class="form-group">
+                        <label for="">Application Title</label><br>
+                        <input type="text" name="application_title" id="" placeholder="Enter application title ">
+                    </div>
+                    <div class="form-group">
+                        <label for="">Confirm Percentage</label> <br>
+                        <input type="text" name="confirm_percentage" id="" placeholder="Enter confirm percentage ">
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-block">FINISH</button>
+                    <button type="button" class="btn btn-secondary btn-block" onclick="showform3()">BACK</button>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</div>

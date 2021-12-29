@@ -1,0 +1,27 @@
+<div class="list">
+    <table>
+        <tbody>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Match %</th>
+                <th>Jonied On</th>
+                <th>Matched Seekers</th>
+            </tr>
+            <% users.map((user) => { %>
+            <tr>
+                <td>
+                <%= user.name%>
+            </td>
+            <td>
+                <%= user.email%>
+            </td>
+            <td><%= user.matchPercentage %></td>
+            <td><%= user.date %></td>
+            <td><%= user.matchedSeekers %></td>
+        </tr>
+        <%  }); %>
+        </tbody>
+    </table>
+  
+</div>
